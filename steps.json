@@ -1,0 +1,307 @@
+{
+  "solution": {
+    "request_id": "4c6d100b-ac4d-4b64-b812-9a31c0d2a552",
+    "query": {
+      "display": "\\lim _{x\\to \\infty }(\\frac{\\sqrt{1+4x^{6}}}{2-x^{3}})",
+      "symbolab_question": "BIG_OPERATOR#\\lim _{x\\to \\infty }(\\frac{\\sqrt{1+4x^{6}}}{2-x^{3}})"
+    },
+    "solution": {
+      "subject": "Calculus",
+      "topic": "Limits",
+      "subTopic": "SingleVar",
+      "default": "-2"
+    },
+    "steps": {
+      "type": "interim",
+      "title": "\\lim _{x\\to \\infty }(\\frac{\\sqrt{1+4x^{6}}}{2-x^{3}})=-2",
+      "input": "\\lim _{x\\to \\infty }(\\frac{\\sqrt{1+4x^{6}}}{2-x^{3}})",
+      "steps": [
+        {
+          "type": "interim",
+          "title": "\\mathrm{Divide by highest denominator power:} \\frac{\\sqrt{\\frac{1}{x^{6}}+4}}{\\frac{2}{x^{3}}-1}",
+          "input": "\\frac{\\sqrt{1+4x^{6}}}{2-x^{3}}",
+          "result": "=\\lim _{x\\to \\infty }(\\frac{\\sqrt{\\frac{1}{x^{6}}+4}}{\\frac{2}{x^{3}}-1})",
+          "steps": [
+            {
+              "type": "interim",
+              "title": "\\sqrt{1+4x^{6}}=x^{3}\\sqrt{\\frac{1}{x^{6}}+4}",
+              "input": "\\sqrt{1+4x^{6}}",
+              "steps": [
+                {
+                  "type": "step",
+                  "primary": "\\mathrm{Apply the following algebraic property}:{\\quad}a+b=a(1+\\frac{b}{a})<br/>1+4x^{6}=x^{6}(\\frac{1}{x^{6}}+4)",
+                  "result": "=\\sqrt{x^{6}(\\frac{1}{x^{6}}+4)}"
+                },
+                {
+                  "type": "step",
+                  "primary": "x\\to\\infty \\quad\\Rightarrow\\quad \\sqrt{x^{6}}=x^{3}",
+                  "result": "=x^{3}\\sqrt{\\frac{1}{x^{6}}+4}"
+                }
+              ],
+              "meta": {
+                "interimType": "xNHpgGd7xwG+KMysG7DUXg=="
+              }
+            },
+            {
+              "type": "step",
+              "result": "=\\frac{x^{3}\\sqrt{\\frac{1}{x^{6}}+4}}{2-x^{3}}"
+            },
+            {
+              "type": "step",
+              "primary": "\\mathrm{Divide by} x^{3}",
+              "result": "=\\frac{\\frac{x^{3}\\sqrt{\\frac{1}{x^{6}}+4}}{x^{3}}}{\\frac{2}{x^{3}}-\\frac{x^{3}}{x^{3}}}"
+            },
+            {
+              "type": "step",
+              "primary": "\\mathrm{Refine}",
+              "result": "=\\frac{\\sqrt{\\frac{1}{x^{6}}+4}}{\\frac{2}{x^{3}}-1}"
+            }
+          ],
+          "meta": {
+            "interimType": "roUy27g539gf9zX+Ae35U9Ga9TvJGbp5XZY7KUzqqnsdsYrkoaj6oAWPTg67ic3L",
+            "practiceLink": "/practice/limits-practice#area=main&subtopic=Rational%20functions",
+            "practiceTopic": "Rational Functions Limits"
+          }
+        },
+        {
+          "type": "step",
+          "primary": "\\lim_{x\\to{a}}[\\frac{f(x)}{g(x)}]=\\frac{\\lim_{x\\to{a}}{f(x)}}{\\lim_{x\\to{a}}{g(x)}},\\quad\\lim_{x\\to{a}}{g(x)}\\neq0<br/>\\mathrm{With the exception of indeterminate form}",
+          "result": "=\\frac{\\lim _{x\\to \\infty }(\\sqrt{\\frac{1}{x^{6}}+4})}{\\lim _{x\\to \\infty }(\\frac{2}{x^{3}}-1)}",
+          "meta": {
+            "title": {
+              "extension": "\\mathrm{Indeterminate Forms:}<br/>\\frac{\\pm\\infty}{\\pm\\infty}<br/>\\frac{0}{0}<br/>\\pm\\infty\\cdot0<br/>0^0<br/>1^{\\pm\\infty}<br/>\\infty^{0}<br/>\\infty-\\infty<br/>"
+            }
+          }
+        },
+        {
+          "type": "interim",
+          "title": "\\lim _{x\\to \\infty }(\\sqrt{\\frac{1}{x^{6}}+4})=2",
+          "input": "\\lim _{x\\to \\infty }(\\sqrt{\\frac{1}{x^{6}}+4})",
+          "steps": [
+            {
+              "type": "step",
+              "primary": "\\lim_{x\\to{a}}[f(x)]^{b}=[\\lim_{x\\to{a}}{f(x)}]^{b}<br/>\\mathrm{With the exception of indeterminate form}",
+              "result": "=\\sqrt{\\lim _{x\\to \\infty }(\\frac{1}{x^{6}}+4)}",
+              "meta": {
+                "title": {
+                  "extension": "\\mathrm{Indeterminate Forms:}<br/>\\frac{\\pm\\infty}{\\pm\\infty}<br/>\\frac{0}{0}<br/>\\pm\\infty\\cdot0<br/>0^0<br/>1^{\\pm\\infty}<br/>\\infty^{0}<br/>\\infty-\\infty<br/>"
+                }
+              }
+            },
+            {
+              "type": "step",
+              "primary": "\\lim_{x\\to{a}}[f(x)\\pm{g(x)}]=\\lim_{x\\to{a}}{f(x)}\\pm\\lim_{x\\to{a}}{g(x)}<br/>\\mathrm{With the exception of indeterminate form}",
+              "result": "=\\sqrt{\\lim _{x\\to \\infty }(\\frac{1}{x^{6}})+\\lim _{x\\to \\infty }(4)}",
+              "meta": {
+                "title": {
+                  "extension": "\\mathrm{Indeterminate Forms:}<br/>\\frac{\\pm\\infty}{\\pm\\infty}<br/>\\frac{0}{0}<br/>\\pm\\infty\\cdot0<br/>0^0<br/>1^{\\pm\\infty}<br/>\\infty^{0}<br/>\\infty-\\infty<br/>"
+                }
+              }
+            },
+            {
+              "type": "interim",
+              "title": "\\lim _{x\\to \\infty }(\\frac{1}{x^{6}})=0",
+              "input": "\\lim _{x\\to \\infty }(\\frac{1}{x^{6}})",
+              "steps": [
+                {
+                  "type": "step",
+                  "primary": "\\mathrm{Apply Infinity Property:} \\lim_{x\\to\\infty}(\\frac{c}{x^a})=0",
+                  "result": "=0"
+                }
+              ],
+              "meta": {
+                "solvingClass": "Limits",
+                "interimType": "zmV4aWcuNCRRyP038SzmZA=="
+              }
+            },
+            {
+              "type": "interim",
+              "title": "\\lim _{x\\to \\infty }(4)=4",
+              "input": "\\lim _{x\\to \\infty }(4)",
+              "steps": [
+                {
+                  "type": "step",
+                  "primary": "\\lim_{x\\to{a}}{c}=c",
+                  "result": "=4"
+                }
+              ],
+              "meta": {
+                "solvingClass": "Limits",
+                "interimType": "zmV4aWcuNCRRyP038SzmZA=="
+              }
+            },
+            {
+              "type": "step",
+              "result": "=\\sqrt{0+4}"
+            },
+            {
+              "type": "interim",
+              "title": "\\mathrm{Simplify }\\sqrt{0+4}:{\\quad}2",
+              "input": "\\sqrt{0+4}",
+              "result": "=2",
+              "steps": [
+                {
+                  "type": "step",
+                  "primary": "\\mathrm{Add the numbers:} 0+4=4",
+                  "result": "=\\sqrt{4}"
+                },
+                {
+                  "type": "step",
+                  "primary": "\\mathrm{Factor the number: } 4=2^{2}",
+                  "result": "=\\sqrt{2^{2}}"
+                },
+                {
+                  "type": "step",
+                  "primary": "\\mathrm{Apply radical rule}: \\sqrt[n]{a^n}=a",
+                  "secondary": [
+                    "\\sqrt{2^{2}}=2"
+                  ],
+                  "result": "=2",
+                  "meta": {
+                    "practiceLink": "/practice/radicals-practice",
+                    "practiceTopic": "Radical Rules"
+                  }
+                }
+              ],
+              "meta": {
+                "solvingClass": "Solver",
+                "interimType": "oVnQ2HJJrq339e3qxfd+vwmuvJSk6ynYh0thqa1eKF4=",
+                "gptData": "jypQO0p3kHr3NcERaKKL2kmQGCOF1G+BFP4/DcBVMavLTwR0lYg9k8KUBed0Me102af7LHJT75+lAQkNodor8zm7KvL3CfOtrQj3r5nFTGl2DHrU3TMu6yUg8UPJ84khQHs1uYvKTlGpqrbElRo8YazyPFJALZ47m6PC+D04hgcmovqMfrWlOz1mBQPmtRZpa/I6yMur4t1y9jE5cenc4Uy4GiIIggulPDmmJ4YdKSLVWub+zE4cR2URtNf37GeasVN6eFp7MwJLXSZDsCb5nXdZLjmZX931Ip+9Bofca/er+EBvHQqfu3kbxSDTyTHPL6KOwCFJdCZV0++psKz2nC+WwxUqysani9jAonu501QS3VMfMJWSpF2KzXsLbEtuubRa5G5lfwREM9aOxrL4ZE8foMThNAx0mIXZFxiCX5DSeAwc2DJaTnjdwHotNGT6XuJKK8O/qWsFo3GLsvMWom+cYDW4XX3gVCwgCEw3hAPNGoPE9TME3q+OPmgkv2RQz5VOhYtoW3JNZwExVMt+eA=="
+              }
+            }
+          ],
+          "meta": {
+            "solvingClass": "Limits",
+            "interimType": "zmV4aWcuNCRRyP038SzmZA=="
+          }
+        },
+        {
+          "type": "interim",
+          "title": "\\lim _{x\\to \\infty }(\\frac{2}{x^{3}}-1)=-1",
+          "input": "\\lim _{x\\to \\infty }(\\frac{2}{x^{3}}-1)",
+          "steps": [
+            {
+              "type": "step",
+              "primary": "\\lim_{x\\to{a}}[f(x)\\pm{g(x)}]=\\lim_{x\\to{a}}{f(x)}\\pm\\lim_{x\\to{a}}{g(x)}<br/>\\mathrm{With the exception of indeterminate form}",
+              "result": "=\\lim _{x\\to \\infty }(\\frac{2}{x^{3}})-\\lim _{x\\to \\infty }(1)",
+              "meta": {
+                "title": {
+                  "extension": "\\mathrm{Indeterminate Forms:}<br/>\\frac{\\pm\\infty}{\\pm\\infty}<br/>\\frac{0}{0}<br/>\\pm\\infty\\cdot0<br/>0^0<br/>1^{\\pm\\infty}<br/>\\infty^{0}<br/>\\infty-\\infty<br/>"
+                }
+              }
+            },
+            {
+              "type": "interim",
+              "title": "\\lim _{x\\to \\infty }(\\frac{2}{x^{3}})=0",
+              "input": "\\lim _{x\\to \\infty }(\\frac{2}{x^{3}})",
+              "steps": [
+                {
+                  "type": "step",
+                  "primary": "\\mathrm{Apply Infinity Property:} \\lim_{x\\to\\infty}(\\frac{c}{x^a})=0",
+                  "result": "=0"
+                }
+              ],
+              "meta": {
+                "solvingClass": "Limits",
+                "interimType": "zmV4aWcuNCRRyP038SzmZA=="
+              }
+            },
+            {
+              "type": "interim",
+              "title": "\\lim _{x\\to \\infty }(1)=1",
+              "input": "\\lim _{x\\to \\infty }(1)",
+              "steps": [
+                {
+                  "type": "step",
+                  "primary": "\\lim_{x\\to{a}}{c}=c",
+                  "result": "=1"
+                }
+              ],
+              "meta": {
+                "solvingClass": "Limits",
+                "interimType": "zmV4aWcuNCRRyP038SzmZA=="
+              }
+            },
+            {
+              "type": "step",
+              "result": "=0-1"
+            },
+            {
+              "type": "step",
+              "primary": "\\mathrm{Simplify}",
+              "result": "=-1",
+              "meta": {
+                "solvingClass": "Solver"
+              }
+            }
+          ],
+          "meta": {
+            "solvingClass": "Limits",
+            "interimType": "zmV4aWcuNCRRyP038SzmZA=="
+          }
+        },
+        {
+          "type": "step",
+          "result": "=\\frac{2}{-1}"
+        },
+        {
+          "type": "step",
+          "primary": "\\mathrm{Simplify}",
+          "result": "=-2",
+          "meta": {
+            "solvingClass": "Solver"
+          }
+        }
+      ],
+      "meta": {
+        "solvingClass": "Limits",
+        "practiceLink": "/practice/limits-practice#area=main&subtopic=Rational%20functions",
+        "practiceTopic": "Rational Functions Limits"
+      }
+    },
+    "plot_output": {
+      "plot_url": "http://www.symbolab.com/api/v1/graph?origin=dym_api_input&query=BIG_OPERATOR%23%5Clim%20_%7Bx%5Cto%20%5Cinfty%20%7D(%5Cfrac%7B%5Csqrt%7B1%2B4x%5E%7B6%7D%7D%7D%7B2-x%5E%7B3%7D%7D)&showViewLarger=true",
+      "plot_data": [
+        {
+          "symbolab_question": "BIG_OPERATOR#\\lim _{x\\to \\infty }(\\frac{\\sqrt{1+4x^{6}}}{2-x^{3}})"
+        }
+      ],
+      "meta": {
+        "isFromCache": true,
+        "plotInfo": {
+          "variable": "x",
+          "funcsToDraw": {
+            "funcs": []
+          },
+          "graphCalcInputErrors": [
+            null
+          ],
+          "plotRequest": "yes",
+          "isFromCache": true
+        },
+        "showViewLarger": true
+      }
+    },
+    "meta": {
+      "isFromCache": true,
+      "showVerify": true
+    }
+  },
+  "related": [
+    {
+      "display": "\\lim _{x\\to -\\infty }(\\frac{x^{2}}{x^{2}+1})",
+      "symbolab_question": "BIG_OPERATOR#\\lim _{x\\to -\\infty }(\\frac{x^{2}}{x^{2}+1})",
+      "origin": "related_3"
+    },
+    {
+      "display": "\\lim _{x\\to \\infty }(\\frac{x}{x-1})",
+      "symbolab_question": "BIG_OPERATOR#\\lim _{x\\to \\infty }(\\frac{x}{x-1})",
+      "origin": "related_3"
+    },
+    {
+      "display": "\\lim _{x\\to \\infty }(\\frac{x+x^{3}+x^{5}}{1-x^{2}+x^{4}})",
+      "symbolab_question": "BIG_OPERATOR#\\lim _{x\\to \\infty }(\\frac{x+x^{3}+x^{5}}{1-x^{2}+x^{4}})",
+      "origin": "related_3"
+    }
+  ]
+}
